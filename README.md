@@ -49,12 +49,101 @@ Check that the containers are running:
 docker ps
 ```
 
-You should see containers for:
+We must see containers for:
 - Orderer
 - Peer0 Org1
 - Peer0 Org2
 - CouchDB instances
 - Certificate Authorities
+
+## Add Organization 3 (Org3)
+
+Navigate to the `addOrg3` directory and add Org3 to the existing network.
+
+```bash
+cd addOrg3
+
+./addOrg3.sh up \
+  -c autochannel \
+  -ca \
+  -s couchdb
+
+cd ..
+```
+
+### Parameters
+
+| Parameter | Description |
+|-----------|-------------|
+| `up` | Adds Org3 to the running network |
+| `-c autochannel` | Uses the existing channel `autochannel` |
+| `-ca` | Uses Certificate Authorities |
+| `-s couchdb` | Uses CouchDB as the state database |
+
+---
+
+## Verify Docker Containers
+
+Check that all network components, including Org3, are running.
+
+```bash
+docker ps -a
+```
+
+You should see containers for:
+
+- Orderer
+- Peer0 Org1
+- Peer0 Org2
+- Peer0 Org3
+- CouchDB instances
+- Certificate Authorities
+- Chaincode containers (after deployment)
+
+---
+
+## Deploy Chaincode
+
+Deploy the KBA Automobile chaincode to the `autochannel` channel.
+
+```bash
+./network.sh deployCC \
+  -ccn KBA-Automobile \
+  -ccp ../../KBA-Automobile/Chaincode/ \
+  -ccl go \
+  -c autochannel \
+  -cccg ../../KBA-Automobile/Chaincode/collections.json
+```
+
+### Parameters
+
+| Parameter | Description |
+|-----------|-------------|
+| `-ccn KBA-Automobile` | Chaincode name |
+| `-ccp ../../KBA-Automobile/Chaincode/` | Path to the chaincode source code |
+| `-ccl go` | Chaincode language (Go) |
+| `-c autochannel` | Channel on which the chaincode is deployed |
+| `-cccg collections.json` | Private data collection configuration file |
+
+### Verify Chaincode Deployment
+
+```bash
+docker ps -a
+```
+
+Look for a chaincode container similar to:
+
+```text
+dev-peer0.org1.example.com-KBA-Automobile_1.0-<hash>
+```
+
+You can also verify that the chaincode has been committed:
+
+```bash
+peer lifecycle chaincode querycommitted \
+  -C autochannel \
+  -n KBA-Automobile
+```
 
 
 
