@@ -14,6 +14,47 @@ copy fabric-samples folder link from: https://drive.google.com/drive/folders/1ya
 KBA-Automobile folder link from :https://drive.google.com/drive/folders/1uUCBKZMzG2rZi_sRHeVk0VBhwdlGsGQS?usp=sharing
 
 ### Commands For Executing this application
+## Bring Up the Test Network
+
+Navigate to the Hyperledger Fabric test network directory and start the network with:
+
+- A channel named **autochannel**
+- Certificate Authorities (CA) enabled
+- CouchDB as the state database
+
+```bash
+cd fabric-samples/test-network
+
+./network.sh up createChannel \
+  -c autochannel \
+  -ca \
+  -s couchdb
+```
+
+### Parameters
+
+| Parameter | Description |
+|------------|-------------|
+| `up` | Starts the Fabric network |
+| `createChannel` | Creates and joins a channel |
+| `-c autochannel` | Creates a channel named `autochannel` |
+| `-ca` | Starts Fabric Certificate Authorities |
+| `-s couchdb` | Uses CouchDB as the state database instead of LevelDB |
+
+### Verify the Network
+
+Check that the containers are running:
+
+```bash
+docker ps
+```
+
+You should see containers for:
+- Orderer
+- Peer0 Org1
+- Peer0 Org2
+- CouchDB instances
+- Certificate Authorities
 
 
 
