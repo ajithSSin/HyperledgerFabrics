@@ -43,7 +43,7 @@ cd fabric-samples/test-network
 
 ### Verify the Network
 
-Check that the containers are running:
+Check that the containers are running:ou
 
 ```bash
 docker ps
@@ -90,7 +90,7 @@ Check that all network components, including Org3, are running.
 docker ps -a
 ```
 
-You should see containers for:
+Results in following containers for:
 
 - Orderer
 - Peer0 Org1
@@ -136,8 +136,7 @@ Look for a chaincode container similar to:
 ```text
 dev-peer0.org1.example.com-KBA-Automobile_1.0-<hash>
 ```
-
-You can also verify that the chaincode has been committed:
+we can verify that the chaincode has been committed:
 
 ```bash
 peer lifecycle chaincode querycommitted \
