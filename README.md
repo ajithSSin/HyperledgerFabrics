@@ -204,7 +204,7 @@ go run .
 
 If the network is running and the chaincode is deployed successfully, the application should connect to the Hyperledger Fabric network and perform the operations implemented in `main.go`.
 
-## Bring Down the Network
+## 6.Bring Down the Network
 
 After completing testing or development activities, stop and remove all network components using the following command:
 
