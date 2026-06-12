@@ -37,14 +37,14 @@ https://drive.google.com/drive/folders/1uUCBKZMzG2rZi_sRHeVk0VBhwdlGsGQS?usp=sha
 KBA-CHF/
 ├── fabric-samples/
 └── KBA-Automobile/
+    ├── Chaincode/
+    ├── Client/
+    ├── Events/
 ```
 ### Project Structure
 
 ```text
-KBA-Automobile/
-├── Chaincode/
-├── Client/
-├── Events/
+
 ```
 Verify that both folders are present before proceeding with the Hyperledger Fabric network setup.
 
