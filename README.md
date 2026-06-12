@@ -206,7 +206,7 @@ If the network is running and the chaincode is deployed successfully, the applic
 
 ## Bring Down the Network
 
-After completing your testing or development activities, stop and remove all network components using the following command:
+After completing testing or development activities, stop and remove all network components using the following command:
 
 ```bash
 ./network.sh down
@@ -229,15 +229,8 @@ Check that the containers have been stopped and removed:
 docker ps -a
 ```
 
-You should no longer see the Fabric network containers running.
+ There should no longer see the Fabric network containers running.
 
 ### Note
 
-If you want to completely clean up generated artifacts and Docker volumes, refer to the Hyperledger Fabric test network cleanup options before restarting the network.
-
-
-
-
-
-
-
+For completely generated artifacts and Docker volumes, refer to the Hyperledger Fabric test network cleanup options before restarting the network.
