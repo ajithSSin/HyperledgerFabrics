@@ -41,11 +41,6 @@ KBA-CHF/
     ├── Client/
     ├── Events/
 ```
-### Project Structure
-
-```text
-
-```
 Verify that both folders are present before proceeding with the Hyperledger Fabric network setup.
 
 ## Commands For Executing this application:
