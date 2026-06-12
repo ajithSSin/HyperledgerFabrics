@@ -1,10 +1,10 @@
-## HyperledgerFabrics-Go
-### KBA-Automobile
+## HyperledgerFabrics-Go 
+## KBA-Automobile
 
 - This SAMPLE-APP Contains the User Interface Section, the front end that the user sees using HTML and CSS (the manufacturer dashboard).
 A simple manufacturer dashboard is created, and add fields and buttons to add a new car details to the network and retrieve any car information from the network.
 
-### Steps to follow
+## Steps to follow
 
 First, create a directory named KBA-CHF to keep all files related to this application.
 
@@ -13,8 +13,8 @@ copy fabric-samples folder link from: https://drive.google.com/drive/folders/1ya
 
 KBA-Automobile folder link from :https://drive.google.com/drive/folders/1uUCBKZMzG2rZi_sRHeVk0VBhwdlGsGQS?usp=sharing
 
-### Commands For Executing this application
-## Bring Up the Test Network
+## Commands For Executing this application:
+## 1.Bring Up the Test Network
 
 Navigate to the Hyperledger Fabric test network directory and start the network with:
 
@@ -56,7 +56,7 @@ We must see containers for:
 - CouchDB instances
 - Certificate Authorities
 
-## Add Organization 3 (Org3)
+## 2.Add Organization 3 (Org3)
 
 Navigate to the `addOrg3` directory and add Org3 to the existing network.
 
@@ -102,7 +102,7 @@ Results in following containers for:
 
 ---
 
-## Deploy Chaincode
+## 3.Deploy Chaincode
 
 Deploy the KBA Automobile chaincode to the `autochannel` channel.
 
@@ -143,7 +143,8 @@ peer lifecycle chaincode querycommitted \
   -C autochannel \
   -n KBA-Automobile
 ```
-### Add the SAMPLE-APP to KBA-Automobile folder
+### 4.Add the SAMPLE-APP to KBA-Automobile folder
+
 
 
 
