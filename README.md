@@ -143,6 +143,7 @@ peer lifecycle chaincode querycommitted \
   -C autochannel \
   -n KBA-Automobile
 ```
+### Add the SAMPLE-APP to KBA-Automobile folder
 
 
 
