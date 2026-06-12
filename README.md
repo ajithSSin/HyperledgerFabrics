@@ -6,12 +6,42 @@ A simple manufacturer dashboard is created, and add fields and buttons to add a 
 
 ## Steps to follow
 
-First, create a directory named KBA-CHF to keep all files related to this application.
+## Project Setup
 
-Add fabric-samples and KBA-Automobile to it; 
-copy fabric-samples folder link from: https://drive.google.com/drive/folders/1yaAX7b_qaIn7zDj8IqZmGCTgirAqlc3k?usp=drive_link
+## Step 1: Create the Project Directory
 
-KBA-Automobile folder link from :https://drive.google.com/drive/folders/1uUCBKZMzG2rZi_sRHeVk0VBhwdlGsGQS?usp=sharing
+Create a directory named **KBA-CHF** to store all files related to this application.
+
+```bash
+mkdir KBA-CHF
+cd KBA-CHF
+```
+
+## Step 2: Download Required Project Folders
+
+Download the following folders and place them inside the **KBA-CHF** directory.
+
+### fabric-samples
+
+Download from:
+
+https://drive.google.com/drive/folders/1yaAX7b_qaIn7zDj8IqZmGCTgirAqlc3k?usp=drive_link
+
+### KBA-Automobile
+
+Download from:
+
+https://drive.google.com/drive/folders/1uUCBKZMzG2rZi_sRHeVk0VBhwdlGsGQS?usp=sharing
+
+## Expected Directory Structure
+
+```text
+KBA-CHF/
+├── fabric-samples/
+└── KBA-Automobile/
+```
+
+Verify that both folders are present before proceeding with the Hyperledger Fabric network setup.
 
 ## Commands For Executing this application:
 ## 1.Bring Up the Test Network
