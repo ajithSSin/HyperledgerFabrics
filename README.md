@@ -38,7 +38,14 @@ KBA-CHF/
 ├── fabric-samples/
 └── KBA-Automobile/
 ```
+### Project Structure
 
+```text
+KBA-Automobile/
+├── Chaincode/
+├── Client/
+├── Events/
+```
 Verify that both folders are present before proceeding with the Hyperledger Fabric network setup.
 
 ## Commands For Executing this application:
