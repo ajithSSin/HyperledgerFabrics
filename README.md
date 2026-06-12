@@ -82,7 +82,7 @@ cd ..
 
 ---
 
-## Verify Docker Containers
+## 3.Verify Docker Containers
 
 Check that all network components, including Org3, are running.
 
@@ -102,7 +102,7 @@ Results in following containers for:
 
 ---
 
-## 3.Deploy Chaincode
+## 4.Deploy Chaincode
 
 Deploy the KBA Automobile chaincode to the `autochannel` channel.
 
@@ -143,7 +143,15 @@ peer lifecycle chaincode querycommitted \
   -C autochannel \
   -n KBA-Automobile
 ```
-### 4.Add the SAMPLE-APP to KBA-Automobile folder
+### 5.Add the SAMPLE-APP to KBA-Automobile folder
+ copy the client code(client.go, profile.go, connect.go files) from the Client unit and add the main.go 
+
+Commands
+go mod init sampleapp – initialize the project
+
+go mod tidy – add necessary packages and remove unwanted packages
+
+go run .  – running the application
 
 
 
