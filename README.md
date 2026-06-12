@@ -143,15 +143,97 @@ peer lifecycle chaincode querycommitted \
   -C autochannel \
   -n KBA-Automobile
 ```
-### 5.Add the SAMPLE-APP to KBA-Automobile folder
- copy the client code(client.go, profile.go, connect.go files) from the Client unit and add the main.go 
 
-Commands
-go mod init sampleapp – initialize the project
+ ## 5.Setup the Sample Application
 
-go mod tidy – add necessary packages and remove unwanted packages
+Add the **SAMPLE-APP** folder inside the **KBA-Automobile** project directory.
 
-go run .  – running the application
+### Project Structure
+
+```text
+KBA-Automobile/
+├── Chaincode/
+├── Client/
+├── Events/
+└── SAMPLE-APP/
+```
+
+### Copy Client Files
+
+Copy the following files from the **Client** module into the **SAMPLE-APP** folder:
+
+- `client.go`
+- `profile.go`
+- `connect.go`
+
+Also add the application's `main.go` file to the **SAMPLE-APP** folder.
+
+### Initialize the Go Module
+
+Navigate to the SAMPLE-APP directory and initialize the Go project.
+
+```bash
+cd SAMPLE-APP
+
+go mod init sampleapp
+```
+
+### Install Required Dependencies
+
+Download and manage all required packages.
+
+```bash
+go mod tidy
+```
+
+This command will:
+
+- Download required dependencies
+- Add missing modules to `go.mod`
+- Remove unused dependencies
+
+### Run the Application
+
+Execute the application using:
+
+```bash
+go run .
+```
+
+### Expected Outcome
+
+If the network is running and the chaincode is deployed successfully, the application should connect to the Hyperledger Fabric network and perform the operations implemented in `main.go`.
+
+## Bring Down the Network
+
+After completing your testing or development activities, stop and remove all network components using the following command:
+
+```bash
+./network.sh down
+```
+
+### What This Command Does
+
+- Stops all Hyperledger Fabric containers
+- Removes peer and orderer containers
+- Removes CouchDB containers
+- Removes Certificate Authority (CA) containers
+- Removes chaincode containers
+- Cleans up the network artifacts created by the test network
+
+### Verify Cleanup
+
+Check that the containers have been stopped and removed:
+
+```bash
+docker ps -a
+```
+
+You should no longer see the Fabric network containers running.
+
+### Note
+
+If you want to completely clean up generated artifacts and Docker volumes, refer to the Hyperledger Fabric test network cleanup options before restarting the network.
 
 
 
